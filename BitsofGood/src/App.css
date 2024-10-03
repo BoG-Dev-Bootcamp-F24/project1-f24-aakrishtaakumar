@@ -1,3 +1,4 @@
+/* General styling */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -7,6 +8,18 @@ body {
   align-items: center;
   height: 100vh;
   background-color: #f0f0f0;
+}
+
+.pokedex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #ccc;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
 }
 
 h1 {
@@ -22,50 +35,97 @@ h1 {
   width: 100%;
 }
 
+.pokemon-image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pokemon-image img {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+
 .pokemon-image h2 {
   font-size: 20px;
   text-transform: lowercase;
 }
 
 .pokemon-stats {
-  background-color: #000000;
+  background-color: #f3f3f3;
   padding: 15px;
   border-radius: 10px;
   text-align: left;
-  
   width: 200px;
 }
 
-.pokedex {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border: 1px solid #ccc;
-  padding: 20px;
-  background-color: white;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  max-width: 500px;
+.pokemon-stats p {
+  margin: 5px 0;
 }
 
-
-img {
-  width: 150px;
-  height: 150px;
+.types {
+  margin-bottom: 20px;
 }
 
+.types ul {
+  list-style: none;
+  padding: 0;
+}
+
+.types li {
+  display: inline-block;
+  padding: 5px 10px;
+  background-color: #bfb593;
+  border-radius: 8px;
+  margin-right: 5px;
+  font-size: 14px;
+  color: white;
+}
+
+/* Controls */
 .controls {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
   margin-top: 20px;
 }
 
 button {
   padding: 10px 20px;
-  margin: 0 10px;
   font-size: 16px;
+  border: none;
+  border-radius: 8px;
   cursor: pointer;
+  background-color: #ddd;
 }
 
 button:disabled {
+  background-color: #bbb;
   cursor: not-allowed;
-  opacity: 0.5;
+}
+
+/* Info and Moves buttons */
+.bottom-controls {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.bottom-controls button {
+  flex: 1;
+  padding: 15px;
+  margin: 0 5px;
+  border-radius: 8px;
+}
+
+.info-button {
+  background-color: #aaffaa;
+}
+
+.moves-button {
+  background-color: #eeeeee;
 }
